@@ -1,11 +1,11 @@
 {
   "name": "esc-file-replace-substring",
   "version": "0.1.0",
-  "description": "Replace (with option to append) string or RegEx in a file, if different vs old contents (SSD/flash memory friendly).",
+  "description": "Replace (with option to append) string or RegEx in a file, if different vs old contents (SSD/flash/write-IOPS friendly).",
   "main": "main.mjs",
   "dependencies": {
+    "esc-colors": "^0.1.2"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node main.mjs"
   },
@@ -14,8 +14,27 @@
     "url": "git+https://github.com/softwarecreations/esc-file-replace-substring.git"
   },
   "keywords": [
-    "minimal-dependencies",
-    "simple"
+    "file replace regex",
+    "update config",
+    "update text file",
+    "update config file regex",
+    "update settings regex",
+    "update ini regex",
+    "file replace string",
+    "file replace substring",
+    "replace string in file",
+    "replace substring in file",
+    "append to config file",
+    "append to text file",
+    "regex",
+    "regular expression",
+    "SSD",
+    "flash",
+    "no external dependencies",
+    "simple",
+    "lightweight",
+    "reliable",
+    "stable"
   ],
   "author": "softwarecreations",
   "license": "MIT",
