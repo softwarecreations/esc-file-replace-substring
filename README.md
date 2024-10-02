@@ -38,6 +38,7 @@ show();
 ![image](https://github.com/user-attachments/assets/637abaa3-6bb5-4e92-9d2b-73fac507bae2)
 
 ## Project goals
+* SSD/flash friendly, only writes if the contents of the file will change
 * No dependencies
 * No nonsense
 * Reliable, no radical changes will ever happen.
