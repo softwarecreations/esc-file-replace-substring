@@ -1,6 +1,6 @@
 {
   "name": "esc-file-replace-substring",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Replace (with option to append) string or RegEx in a file, if different vs old contents (SSD/flash/write-IOPS friendly).",
   "main": "main.mjs",
   "dependencies": {

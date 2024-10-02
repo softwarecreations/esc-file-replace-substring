@@ -8,20 +8,21 @@ const fileReplaceSubstring = (
   replace,
   ifNotFound,
   changedLogF = s => console.log(colors.magenta(s)),
-  sameLogF,
+  notFoundLogF,
+  unchangedLogF,
 ) => {
 	const buf = fs.readFileSync(filePath).toString();
 	let newBuf = buf;
 	if (buf.match(search)===null) {
 		if (ifNotFound!=='append') {
-      if (sameLogF) sameLogF(`${replace} not found in ${filePath} - No change.`);
+      if (notFoundLogF) notFoundLogF(`${replace} not found in ${filePath}`);
       return false;
     }
 		newBuf += `\n${replace}\n`;
 	} else {
 		newBuf = buf.replace(search, replace);
 		if (newBuf===buf) {
-      if (sameLogF) sameLogF(`${replace} not found in ${filePath} - No change.`);
+      if (unchangedLogF) unchangedLogF(`${replace} found, but ${filePath} unchanged.`);
       return false;
     }
 	}
