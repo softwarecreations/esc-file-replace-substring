@@ -1,8 +1,9 @@
 {
   "name": "esc-file-replace-substring",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Replace (with option to append) string or RegEx in a file, if different vs old contents (SSD/flash/write-IOPS friendly).",
   "main": "main.mjs",
+  "types": "main.d.ts",
   "dependencies": {
     "esc-colors": "^0.1.2"
   },
