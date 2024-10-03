@@ -2,7 +2,7 @@
 import colors from 'esc-colors';
 import fs from 'fs';
 
-const fileReplaceSubstring = (
+export const fileReplaceSubstring = (
   filePath,
   search,
   replace,
