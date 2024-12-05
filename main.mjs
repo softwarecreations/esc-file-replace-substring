@@ -11,17 +11,17 @@ export const fileReplaceSubstring = (
   notFoundLogF,
   unchangedLogF,
 ) => {
-	const buf = fs.readFileSync(filePath).toString();
-	let newBuf = buf;
-	if (buf.match(search)===null) {
+	const oldBuf = fs.readFileSync(filePath).toString();
+	let newBuf = oldBuf;
+	if (oldBuf.match(search)===null) {
 		if (ifNotFound!=='append') {
       if (notFoundLogF) notFoundLogF(`${replace} not found in ${filePath}`);
       return false;
     }
 		newBuf += `\n${replace}\n`;
 	} else {
-		newBuf = buf.replace(search, replace);
-		if (newBuf===buf) {
+		newBuf = oldBuf.replace(search, replace);
+		if (newBuf===oldBuf || newBuf.replace(/# updated[^\n]+/g,'')===oldBuf.replace(/# updated[^\n]+/g,'')) {
       if (unchangedLogF) unchangedLogF(`${replace} found, but ${filePath} unchanged.`);
       return false;
     }
